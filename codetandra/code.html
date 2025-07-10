@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeTantra Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-home {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .email {
+            color: white;
+            font-size: 14px;
+        }
+
+        .material-icons {
+            font-size: 16px; 
+        }
+
+
+        .logout {
+            background-color: #dc3545;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .logout:hover {
+            background-color: #b02a37;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 70px;
+            max-width: 900px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .card {
+            background-color: white;
+            height:260px;
+            width:300px;
+            border-radius: 2px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: 60%;
+            border-radius: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin: 10px 0;
+            color: #555;
+            line-height:25px;
+        }
+
+        .card-title {
+            background-color: #2c3e50;
+            color: white;
+            padding: 7px;
+            display: block;
+            width:100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-home">
+            
+            <div class="logo">CODETANTRA</div>
+            <i class="material-icons">home</i>
+            <a style="margin-left: -15px; font-size:14px; margin-top:3px;">Home</a>
+        </div>
+        <div class="nav-links">
+            <a href="#">nandhini3305@gmail.com &#9662;
+            </a>
+            <a href="#">Support</a>
+            <button class="logout">Logout <i class="material-icons">logout</i>
+            </button>
+
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <img src="course.jpg" alt="Courses">
+            <p>Click here to view all your <br>courses/subjects</p>
+            <div class="card-title">Courses</div>
+        </div>
+
+        <div class="card">
+            <img src="test.png" alt="Tests">
+            <p>Click here to view all your scheduled and <br>completed tests</p>
+            <div class="card-title">Tests</div>
+        </div>
+
+        <div class="card">
+            <img src="lab.jpg" alt="Programming Labs">
+            <p>Click here to view all your programming <br>labs</p>
+            <div class="card-title">Programming Labs</div>
+        </div>
+
+        <div class="card">
+            <img src="tools.png" alt="Tools">
+            <p>Click here to access tools<br>Happy Learning....</p>
+            <div class="card-title">Tools</div>
+        </div>
+
+        <div class="card">
+            <img src="support.jpeg" alt="Help & Support">
+            <p>Click here to reach us<br>Queries contact us</p>
+            <div class="card-title">Help & Support</div>
+        </div>
+    </div>
+
+</body>
+</html>

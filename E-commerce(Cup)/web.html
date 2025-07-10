@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #56508c;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+        }
+        nav h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            padding: 8px 12px;
+        }
+        nav ul li a:hover {
+            background: #2f295d;
+            color: white;
+            border-radius: 5px;
+        }
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 40px 10%;
+        }
+        .card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .card p {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #56508c;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #2f295d;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Sip & Savor </h1>
+            <ul>
+                <li><a href="web.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="new.html">New Arrivals</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <section style="text-align: center; padding: 70px;">
+        <br><br><br><br><br><br><br><br><br>
+        <h2>Welcome to Our Cup Store!</h2>
+        <p>Discover a variety of stylish and high-quality cups perfect for every occasion. Whether you need a classic coffee mug, an elegant tea cup, or a trendy travel tumbler, we have something for you!</p>
+        <p>Go to the <strong>Shop</strong> section to explore our products </p>
+        <a href="shop.html" class="btn" >Visit Shop</a>
+    </section>
+    <br><br><br><br><br><br><br><br><br>
+    <section style="padding: 50px 10%;">
+        <h2 style="text-align: center;">What Our Customers Say</h2>
+        <div class="review-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding-top: 20px;">
+    
+            <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1); text-align: center;">
+                <p style="font-size: 16px; font-style: italic;">"Amazing quality! The cups are stylish and durable. Love them!"</p>
+                <h4 style="margin-top: 10px;">- Emily R.</h4>
+            </div>
+    
+            <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1); text-align: center;">
+                <p style="font-size: 16px; font-style: italic;">"Fast delivery and great customer service. Will order again!"</p>
+                <h4 style="margin-top: 10px;">- John D.</h4>
+            </div>
+    
+            <div style="background: #fff; padding: 20px; border-radius: 10px; box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1); text-align: center;">
+                <p style="font-size: 16px; font-style: italic;">"Beautiful designs and very affordable prices. Highly recommended!"</p>
+                <h4 style="margin-top: 10px;">- Sarah L.</h4>
+            </div>
+        </div>
+    </section>    
+</body>
+</html>

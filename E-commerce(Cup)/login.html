@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #56508c;
+            width: 100%;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+        }
+
+        nav h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+        }
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 500px;
+            margin-top: 80px; 
+        }
+        .container input {
+            width: 80%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #56508c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .container button:hover {
+            background-color: #2f295d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Sip & Savor</h1>
+        </nav>
+    </header>
+
+    <div class="container">
+
+            <h2>Login to Our Sip and Savour</h2>
+            <label>Name:</label>
+            <input type="text" id="na" required><br><br>
+            
+            <label>Password:</label>
+            <input type="password" id="pw" required>
+            <p style="color:lightgray;">Password should contains:</p>
+            <p style="color:rgba(211, 211, 211, 0.874)">Minimum length of 8<br>Atleast One Uppercase<br>Atleast One Lowercase<br>Atleast One special Character<br>Atleast One Number</p>
+            
+
+            <button onclick="pwc()">Login</button>
+            <p id="feedback" style="color: red; font-weight: bold;"></p>
+            <script>
+                function pwc(){
+                    let nam=document.getElementById('na').value;
+                    let val=document.getElementById('pw').value;
+                    let feedback = document.getElementById('feedback');
+                    let len=val.length>=8;
+                    let numCheck=/[0-9]/.test(val);
+                    let capsCheck=/[A-Z]/.test(val);
+                    let smallCheck=/[a-z]/.test(val);
+                    let spch=/[!@#$%^&*]/.test(val);
+                    if(len && numCheck && capsCheck && smallCheck && spch){
+                        window.location.href = 'web.html';
+                    }
+                    else if(numCheck && (capsCheck || smallCheck) && len){
+                        alert("Medium Password");
+                    }
+                    else{
+                        if (!len) {
+                            feedback.textContent = "Weak Password: Minimum length should be 8";
+                        } else {
+                            feedback.textContent = "Weak Password";
+                        }
+                    feedback.style.color = "red"; 
+                }
+            }
+            </script>
+    </div>
+</body>
+</html>

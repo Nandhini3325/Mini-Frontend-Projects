@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Password:<input type="password" id="pw" >
+        <button onclick="pwc()">Login</button>
+    </div>
+    <script>
+        function pwc(){
+            let val=document.getElementById('pw').value;
+            let len=val.length>=8;
+            let numCheck=/[0-9]/.test(val);
+            let capsCheck=/[A-Z]/.test(val);
+            let smallCheck=/[a-z]/.test(val);
+            let spch=/[!@#$%^&*]/.test(val);
+            if(len && numCheck && capsCheck && smallCheck && spch){
+                alert("Strong Password...Hurrayyy!!!");
+            }
+            else if(numCheck && (capsCheck || smallCheck) && len){
+                alert("Medium Password");
+            }
+            else{
+                alert("Weak Password");
+            }
+        }
+
+    </script>
+
+    
+</body>
+</html>

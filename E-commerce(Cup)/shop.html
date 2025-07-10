@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #56508c;
+            padding: 10px 0;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+        }
+
+        nav h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #0468a1;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 40px 10%;
+        }
+
+        .card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            height:350px;
+        }
+
+        .card img {
+            width: 100%;
+            height:50%;
+            border-radius: 15px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .btn {
+            display: block;
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #56508c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #2f295d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Sip & Savor </h1>
+            <ul>
+                <li><a href="web.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="new.html">New Arrivals</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product-container">
+        <div class="card">
+            <img src="cup.jpg" alt="Product Image">
+            <h2>Ceramic Coffee Cup</h2>
+            <p>A durable and stylish ceramic cup perfect for coffee, tea, or any beverage.</p>
+            <span class="price">$49.99</span>
+            <a href="shop.html" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="cup1.jpg" alt="Product Image">
+            <h2>Glass Coffee Mug</h2>
+            <p>Elegant glass mug for a perfect coffee experience.</p>
+            <span class="price">$39.99</span>
+            <a href="shop.html" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="cup3.png" alt="Product Image">
+            <h2>Insulated Travel Mug</h2>
+            <p>Perfect for keeping your drinks hot or cold.</p>
+            <span class="price">$29.99</span>
+            <a href="shop.html" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="cup2.jpg" alt="Product Image">
+            <h2>Vintage Coffee Cup</h2>
+            <p>A stylish vintage cup for coffee lovers.Enjoy your life</p>
+            <span class="price">$44.99</span>
+            <a href="shop.html" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="cup4.jpg" alt="Product Image">
+            <h2>Porcelain Coffee Cup</h2>
+            <p>Elegant and high-quality porcelain coffee cup.</p>
+            <span class="price">$34.99</span>
+            <a href="shop.html" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="cup5.jpg" alt="Product Image">
+            <h2>Stainless Steel Coffee Cup</h2>
+            <p>Durable and stylish steel coffee cup, Enjoy your Life.</p>
+            <span class="price">$24.99</span>
+            <a href="shop.html" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="cup6.png" alt="Product Image">
+            <h2>Thermal Coffee Cup</h2>
+            <p>Keeps your coffee warm for hours, Enjoy your Life.</p>
+            <span class="price">$54.99</span>
+            <a href="shop.html" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="cup7.jpg" alt="Product Image">
+            <h2>Wooden Handle Cup</h2>
+            <p>A modern coffee cup with a wooden handle.</p>
+            <span class="price">$59.99</span>
+            <a href="shop.html" class="btn">Buy Now</a>
+        </div>
+    </div>
+</body>
+</html>

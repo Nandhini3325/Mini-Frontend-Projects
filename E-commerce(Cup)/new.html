@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals - Cup Store</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #56508c;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+        }
+
+        nav h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #0468a1;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .new-arrivals {
+            text-align: center;
+            padding: 20px 10%;
+        }
+
+        .new-arrivals h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height:60%;
+            border-radius: 15px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .btn {
+            display: block;
+            width: 90%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #56508c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #2f295d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Sip & Savor</h1>
+            <ul>
+                <li><a href="web.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="new.html">New Arrivals</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="new-arrivals">
+        <h2>New Arrivals</h2>
+        <p>Check out our latest collection of stylish and high-quality cups!</p>
+
+        <div class="product-container">
+            
+            <div class="card">
+                <img src="new-arrival1.jpg" alt="Stylish Ceramic Mug">
+                <h2>Stylish Ceramic Mug</h2>
+                <p>Elegant and durable, perfect for coffee lovers.</p>
+                <p class="price">$12.99</p>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+
+            <div class="card">
+                <img src="new-arrival2.jpg" alt="Insulated Travel Tumbler">
+                <h2>Insulated Travel Tumbler</h2>
+                <p>Keeps your drink hot or cold for hours.Enjoy your drink!!</p>
+                <p class="price">$18.99</p>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+
+            <div class="card">
+                <img src="new-arrival3.jpg" alt="Minimalist Coffee Cup Set">
+                <h2>Minimalist Coffee Cup Set</h2>
+                <p>Modern design, perfect for a cozy coffee time.</p>
+                <p class="price">$22.99</p>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+
+            <div class="card">
+                <img src="new-arrival4.jpeg" alt="Personalized Name Mug">
+                <h2>Personalized Name Mug</h2>
+                <p>Customize with your name or favorite quote.</p>
+                <p class="price">$15.99</p>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

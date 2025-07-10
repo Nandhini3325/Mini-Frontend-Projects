@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-inc-dec</title>
+    <style>
+        *{
+            text-align:center;
+        }
+        .btn{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Sizing an Image</h2>
+    <p>Increase the width of an image by clicking the plus button and decrease by clicking the Minus button. For every action, the image increases or decreases by 5px</p>
+    <img id="im" src="gro.png" alt="image" width="200px">
+    <p id="alert"> </p>
+    <p id="para">Width:200px</p>
+    <div class="btn">
+        <button id="minus">-</button>
+        <p style="padding:5px">5px</p>
+        <button id="plus">+</button>
+    </div>
+
+    <script>
+        let dec = document.getElementById('minus');
+        let inc = document.getElementById('plus');
+        let iwid = document.getElementById('im');  
+        let para = document.getElementById('para');
+        let alert = document.getElementById('alert');
+        let org = 200;
+
+    dec.addEventListener('click', function(){
+        if(org > 100){
+            org -= 5;
+            iwid.style.width = org + 'px';
+            para.textContent = 'Width: ' + org + 'px';
+            alert.textContent = '';  
+        } else {
+            alert.textContent = 'Min size';
+            alert.style.color = 'red';
+            org = 100; 
+        }
+    });
+
+    inc.addEventListener('click', function(){
+        if(org < 300){
+            org += 5;
+            iwid.style.width = org + 'px';
+            para.textContent = 'Width: ' + org + 'px';
+            alert.textContent = '';  
+        } else {
+            alert.textContent = 'Max size';
+            alert.style.color = 'red';
+            org = 300; 
+        }
+    });
+
+    </script>
+    
+</body>
+</html>

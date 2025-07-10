@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .item-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .cart {
+            margin-top: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #eee;
+            padding: 10px;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+        }
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            color: white;
+        }
+        .add-btn {
+            background-color: green;
+        }
+        .remove-btn {
+            background-color: red;
+        }
+        .clear-btn {
+            background-color: black;
+            margin-top: 10px;
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shopping Cart</h1>
+        <div class="item-container">
+            <span>Apple - $10</span>
+            <button class="btn add-btn" onclick="add('Apple', 10)">Add</button>
+        </div>
+        <div class="item-container">
+            <span>Grapes - $5</span>
+            <button class="btn add-btn" onclick="add('Banana', 5)">Add</button>
+        </div>
+        <div class="item-container">
+            <span>Orange - $7</span>
+            <button class="btn add-btn" onclick="add('Orange', 7)">Add</button>
+        </div>
+
+        <div class="cart">
+            <h2>Cart</h2>
+            <ul id="cartItems"></ul>
+            <p><strong>Total: $<span id="totalAmount">0</span></strong></p>
+            <button class="btn clear-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = {};
+        let total = 0;
+
+        function add(item, amount) {
+            if (cart[item]) {
+                cart[item].count += 1;
+                cart[item].total += amount;
+            } else {
+                cart[item] = { count: 1, total: amount };
+            }
+            total += amount;
+            updateCart();
+        }
+
+        function rem(item) {
+            if (cart[item]) {
+                total -= cart[item].total;
+                delete cart[item];
+                updateCart();
+            }
+        }
+
+        function clearCart() {
+            cart = {};
+            total = 0;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const totalAmount = document.getElementById('totalAmount');
+            cartItems.innerHTML = '';
+
+            for (let item in cart) {
+                const li = document.createElement('li');
+                li.textContent = `${item} (x${cart[item].count}) - $${cart[item].total}`;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.className = 'btn remove-btn';
+                removeButton.onclick = () => rem(item);
+
+                li.appendChild(removeButton);
+                cartItems.appendChild(li);
+            }
+
+            totalAmount.textContent = total;
+        }
+    </script>
+</body>
+</html>
